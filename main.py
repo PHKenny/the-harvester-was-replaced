@@ -12,11 +12,11 @@ while True:
 
     desired_entity = Entities.Grass
     ## Only Carrots and Grass
-    desired_entity = only_carrots_and_grass(x, y)
+    # desired_entity = only_carrots_and_grass(x, y)
     ## Balanced
     # desired_entity = balanced_mode(x, y)
     ## Maze
-    # desired_entity = maze_mode(x, y)
+    desired_entity = maze_mode(x, y)
 
     if desired_entity != Entities.Carrots and desired_entity != Entities.Pumpkin and desired_entity != Entities.Sunflower:
         if get_ground_type() == Grounds.Soil:

@@ -21,6 +21,9 @@ def maze_mode(current_x, current_y):
             return Entities.Pumpkin
         return Entities.Carrots
 
+    if current_x == 4:
+        return Entities.Bush
+
     if current_x % 2 == 0:
         if current_y % 2 == 0:
             return Entities.Grass
