@@ -2,6 +2,7 @@ from __builtins__ import *
 from actions import *
 from maze import *
 from move import *
+from farm_combo import *
 
 while True:
     trade_up()
@@ -11,43 +12,11 @@ while True:
 
     desired_entity = Entities.Grass
     ## Only Carrots and Grass
-    # if x < 5:
-    #     desired_entity = Entities.Grass
-    # else:
-    #     desired_entity = Entities.Carrots
-
+    desired_entity = only_carrots_and_grass(x, y)
     ## Balanced
-    # if x % 2 == 0:
-    #     if y % 2 == 0:
-    #         desired_entity = Entities.Grass
-    #     else:
-    #         desired_entity = Entities.Tree
-    # else:
-    #     if y % 2 == 0:
-    #         desired_entity = Entities.Tree
-    #     else:
-    #         desired_entity = Entities.Carrots
-    
+    # desired_entity = balanced_mode(x, y)
     ## Maze
-    # if x < 4:
-    #     if y < 4:
-    #         desired_entity = Entities.Pumpkin
-    #     else:
-    #         desired_entity = Entities.Carrots
-    # else:
-    #     # if y < 2:
-    #     #     desired_entity = Entities.Bush
-    #     # else:
-    #     if x % 2 == 0:
-    #         if y % 2 == 0:
-    #             desired_entity = Entities.Grass
-    #         else:
-    #             desired_entity = Entities.Tree
-    #     else:
-    #         if y % 2 == 0:
-    #             desired_entity = Entities.Tree
-    #         else:
-    #             desired_entity = Entities.Grass
+    # desired_entity = maze_mode(x, y)
 
     if desired_entity != Entities.Carrots and desired_entity != Entities.Pumpkin and desired_entity != Entities.Sunflower:
         if get_ground_type() == Grounds.Soil:
